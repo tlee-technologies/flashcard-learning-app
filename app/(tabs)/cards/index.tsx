@@ -9,7 +9,7 @@ import {
   Platform,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Search, Filter, Plus, BookOpen, Clock, CheckCircle } from "lucide-react-native";
+import { Search, Filter, Plus, BookOpen, Clock, CheckCircle, Upload } from "lucide-react-native";
 import { router } from "expo-router";
 import { useStudy } from "@/providers/StudyProvider";
 
@@ -107,8 +107,11 @@ export default function CardsScreen() {
             placeholderTextColor="#9CA3AF"
           />
         </View>
-        <TouchableOpacity style={styles.filterButton}>
-          <Filter size={20} color="#6366F1" />
+        <TouchableOpacity 
+          style={styles.filterButton}
+          onPress={() => router.push("/cards/import" as any)}
+        >
+          <Upload size={20} color="#6366F1" />
         </TouchableOpacity>
       </View>
 

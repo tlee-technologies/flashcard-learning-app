@@ -10,6 +10,13 @@ export default function CardsLayout() {
           headerLargeTitle: true,
         }} 
       />
+      <Stack.Screen 
+        name="import" 
+        options={{ 
+          title: "Import from PDF",
+          presentation: "modal"
+        }} 
+      />
     </Stack>
   );
 }
